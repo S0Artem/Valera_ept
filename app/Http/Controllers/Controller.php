@@ -8,7 +8,6 @@ class Controller
     public function showProducts()
     {
 
-        $products = products::all();
         $products = [
             ["name" => "Orange", "cost" => 50000000, "amount" => 27],
             ["name" => "Banana", "cost" => 120000000, "amount" => 17],
