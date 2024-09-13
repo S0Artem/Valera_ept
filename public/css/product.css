@@ -1,0 +1,9 @@
+.product{
+    display: flex;
+}
+.in-stock{
+    background-color: aqua;
+}
+.not-in-stock{
+    background-color: beige;
+}
