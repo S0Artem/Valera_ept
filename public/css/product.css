@@ -1,9 +1,28 @@
-.product{
+.product {
     display: flex;
+    flex-wrap: wrap; /* Чтобы элементы переносились на новую строку */
+    gap: 1rem; /* Разделение между продуктами */
 }
-.in-stock{
-    background-color: aqua;
+
+.in-stock {
+    background-color: #d1e7dd; /* Зеленоватый цвет (успешный статус) */
+    border: 1px solid #0f5132;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
-.not-in-stock{
-    background-color: beige;
+
+.not-in-stock {
+    background-color: #f8d7da; /* Розоватый цвет (предупреждение) */
+    border: 1px solid #842029;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.non {
+    display: none; /* Скрыть поле с именем */
+}
+
+ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
 }

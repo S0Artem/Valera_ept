@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('fio');
-            $table->string('email')->unique();
-            #$table->timestamp('email_verified_at')->nullable();
+            $table->string('login')->unique();
             $table->string('password');
+            $table->string('role')->default('user');
+            $table->rememberToken();
+            $table->timestamps(); // Исправлено: добавлены created_at и updated_at
         });
-
+        
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
@@ -33,6 +35,7 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+        
     }
 
     /**

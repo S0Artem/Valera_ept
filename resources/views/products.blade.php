@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
-    <title>Products List</title>
-</head>
-<body>
-    @include ('header')
-    <section class="product_section">
-        <h1>Список продуктов</h1>
+@include ('header')
+<section class="product_section container my-5">
+    <h1 class="text-center mb-4">Список продуктов</h1>
+    <div class="row">
         @include ('product/product')
-    </section>
-    @include ('footer')
+    </div>
+</section>
+@include ('footer')
 </body>
 </html>

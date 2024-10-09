@@ -10,6 +10,6 @@ class Controller
 
         $products = products::all();
 
-        return view('products', ['products' => $products]); // Передаем массив продуктов в представление
+        return view('products', ['products' => $products]);
     }
 }
